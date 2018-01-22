@@ -1,18 +1,75 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-title class="tengah">Home</ion-title>
+   <ion-buttons end>
+        <button ion-button icon-only color="royal" (tap)="GetChartitems()">
+          <ion-icon name="cart"></ion-icon>
+        </button>
+      </ion-buttons>
+</ion-navbar>
+<ion-navbar color="danger">
+    <ion-toolbar no-border-top>
+        <ion-searchbar [(ngModel)]="searchString" showCancelButton="true">
+        </ion-searchbar>
+      </ion-toolbar>
+</ion-navbar>
 </ion-header>
+<ion-content class="card-background-page">
+      <ion-card>
+          <ion-slides pager>
+                <ion-slide>
+                    <img src="assets/imgs/Pemandangan-Sawah-dan-Gunung.jpg"/>
+                    <div class="card-title">São Paulo</div>
+                    <div class="card-subtitle">41 Listings</div>
+                </ion-slide>
+                <ion-slide style="background-color: blue">
+                    <img src="assets/imgs/Pemandangan-Sawah-dan-Gunung.jpg"/>
+                    <div class="card-title">São Paulo</div>
+                    <div class="card-subtitle">41 Listings</div>
+                </ion-slide>
+              
+                <ion-slide style="background-color: red">
+                    <img src="assets/imgs/Pemandangan-Sawah-dan-Gunung.jpg"/>
+                    <div class="card-title">São Paulo</div>
+                    <div class="card-subtitle">41 Listings</div>
+                </ion-slide>
+              </ion-slides>
+      </ion-card>
+    
+      <ion-card>
+          <ion-slides pager>
+                <ion-slide>
+                    <img src="assets/imgs/Pemandangan-Sawah-dan-Gunung.jpg"/>
+                    <div class="card-title">São Paulo</div>
+                    <div class="card-subtitle">41 Listings</div>
+                </ion-slide>
+              
+                <ion-slide>
+                    <img src="assets/imgs/Pemandangan-Sawah-dan-Gunung.jpg"/>
+                    <div class="card-title">São Paulo</div>
+                    <div class="card-subtitle">41 Listings</div>
+                </ion-slide>
+                <ion-slide>
+                    <img src="assets/imgs/Pemandangan-Sawah-dan-Gunung.jpg"/>
+                    <div class="card-title">São Paulo</div>
+                    <div class="card-subtitle">41 Listings</div>
+                </ion-slide>
+              </ion-slides>
+      </ion-card>
+      <ion-card>
+        <img src="assets/imgs/Pemandangan-Sawah-dan-Gunung.jpg"/>
+        <div class="card-title">San Francisco</div>
+        <div class="card-subtitle">72 Listings</div>
+      </ion-card>
+    
+      <ion-card>
+        <img src="assets/imgs/Pemandangan-Sawah-dan-Gunung.jpg"/>
+        <div class="card-title">Madison</div>
+        <div class="card-subtitle">28 Listings</div>
+      </ion-card>
+    
+    </ion-content>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content>

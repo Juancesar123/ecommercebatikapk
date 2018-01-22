@@ -1,13 +1,20 @@
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="danger">
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list>
+        <ion-card text-center class="hide-card">
+            <img src="assets/imgs/Pemandangan-Sawah-dan-Gunung.jpg" class="custom-avatar"/>
+            <h2>Juan Ceasar Andrianto</h2>
+            <p>Saldo: Rp 120.000,00</p>
+            <hr>
+        </ion-card>  
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          <ion-icon item-left [name]="p.icon"></ion-icon>
         {{p.title}}
       </button>
     </ion-list>

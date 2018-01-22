@@ -1,23 +1,52 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
-  </ion-navbar>
+    <ion-title class="tengah">Product List</ion-title>
+    <ion-buttons end>
+         <button ion-button icon-only color="royal" (tap)="GetChartitems()">
+           <ion-icon name="cart"></ion-icon>
+         </button>
+       </ion-buttons>
+ </ion-navbar>
+ <ion-navbar color="danger">
+     <ion-toolbar no-border-top>
+         <ion-searchbar [(ngModel)]="searchString" showCancelButton="true">
+         </ion-searchbar>
+       </ion-toolbar>
+ </ion-navbar>
 </ion-header>
-
-<ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+<ion-content padding>
+        <ion-card *ngFor="let item of NewsData | async ">
+          <img src="assets/imgs/Pemandangan-Sawah-dan-Gunung.jpg"/>
+          <ion-card-content>
+            <ion-card-title>
+              {{item.namabarang}}
+            </ion-card-title>
+            <p>
+             {{item.keterangan}}
+            </p>
+          </ion-card-content>
+          <ion-row no-padding>
+            <ion-col>
+              <button ion-button clear small color="danger" icon-start>
+                <ion-icon name='star'></ion-icon>
+                Favorite
+              </button>
+            </ion-col>
+            <ion-col text-center>
+              <button ion-button clear small color="danger" icon-start (tap)="GetDetail()">
+                <ion-icon name='eye'></ion-icon>
+                View
+              </button>
+            </ion-col>
+            <ion-col text-right>
+              <button ion-button clear small color="danger" icon-start>
+                <ion-icon name='cart'></ion-icon>
+                Add to Cart
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-card>
 </ion-content>

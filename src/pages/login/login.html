@@ -1,0 +1,45 @@
+<!--
+  Generated template for the LoginformPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  
+    <ion-navbar color="danger">
+      <ion-title>LOGIN</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <img src="assets/imgs/189578.png" class="img-controll">
+      <ion-card>
+        
+          <ion-card-header>
+            Login Here 
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-list>
+                <ion-item>
+                  <ion-label floating>Username</ion-label>
+                  <ion-input type="text" [(ngModel)]="username"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label floating>Password</ion-label>
+                  <ion-input type="password" [(ngModel)]="password"></ion-input>
+                </ion-item>
+              
+              </ion-list>
+          </ion-card-content>
+          <div padding> 
+            <button ion-button full icon-start (tap)="Login()">
+              <ion-icon  name="key"></ion-icon> 
+              Login
+            </button>
+          </div>
+        </ion-card>
+  </ion-content>
+  

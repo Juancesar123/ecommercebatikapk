@@ -14,3 +14,19 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.hide-card {
+    -webkit-box-shadow: none!important;
+    background-color: "#3F51B5"
+  }
+  .card{
+    background-image: url('assets/imgs/Pemandangan-Sawah-dan-Gunung.jpg')
+  }
+  .custom-avatar {
+    height: 30vw;
+    width: 30vw;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
